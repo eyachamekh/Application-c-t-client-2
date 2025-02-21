@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './App.css';
-import Header from './Header';
-import Footer from './Footer';
-import CounterC  from './CounterC'; 
-import CounterF from './CounterF';
-import Pokemon from './Pokemon';
-import ColorBox from "./ColorBox";
-import NoteManager from "./NoteManager"; 
-import TodoListWithPriorities from "./TodoListWithPriorities"; 
+import Header from './components/Header';
+import Footer from './components/Footer';
+import CounterC  from './components/CounterC'; 
+import CounterF from './components/CounterF';
+import Pokemon from './components/Pokemon';
+import ColorBox from "./components/ColorBox";
+import NoteManager from "./components/NoteManager"; 
+import TodoListWithPriorities from "./components/ToDoListWithPriorities"; 
+import Events from './components/Events';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -51,6 +52,10 @@ function App() {
       
       <h2 style={{ textAlign: "center" }}> Todo List avec Priorités</h2>
       <TodoListWithPriorities initialTasks={initialTasks} />
+
+<Events />
+
+
 
       <Footer />
     </div>
